@@ -1,0 +1,51 @@
+service: vision
+frameworkVersion: "4"
+
+provider:
+  name: aws
+  runtime: python3.9
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "s3:GetObject"
+        - "s3:PutObject"
+        - "rekognition:DetectFaces"
+        - "rekognition:DetectLabels"
+        - "bedrock:*"
+      Resource: "*"
+
+functions:
+  health:
+    handler: src/handlers/health_handler.health
+    events:
+      - httpApi:
+          path: /
+          method: get
+  v1Description:
+    handler: src/handlers/description_handler.v1_description
+    events:
+      - httpApi:
+          path: /v1
+          method: get
+  v2Description:
+    handler: src/handlers/description_handler.v2_description
+    events:
+      - httpApi:
+          path: /v2
+          method: get
+
+  visionV1:
+    handler: src/handlers/v1_vision_handler.v1Vision
+    timeout: 30
+    events:
+      - http:
+          path: /v1/vision
+          method: post
+
+  visionV2:
+    handler: src/handlers/v2_vision_handler.v2Vision
+    timeout: 30
+    events:
+      - http:
+          path: /v2/vision
+          method: post
