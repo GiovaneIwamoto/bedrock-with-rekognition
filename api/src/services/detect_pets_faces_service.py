@@ -95,8 +95,8 @@ class DetectPetsFacesService:
         
         # Adding tips to the pets_info object if there is an identified breed
         if breed:
-            dicas = self.get_animal_tips(breed)
-            pets_info["Dicas"] = dicas
+            tips = self.get_animal_tips(breed)
+            pets_info["Tips"] = tips
 
         # Construindo o corpo da resposta
         response_body = {
