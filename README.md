@@ -133,4 +133,4 @@ $ serverless deploy
 
 ### **AUTHORS**
 
-[Giovane Iwamoto](https://github.com/GiovaneIwamoto) | [Gustavo Vasconcelos](https://github.com/GustavoSVasconcelos)| [Renan Mazzilli](https://github.com/renan-mazzilli)| [Thomaz Casquel](https://github.com/Casquel)
+[Giovane Iwamoto](https://github.com/GiovaneIwamoto) | [Gustavo Vasconcelos](https://github.com/GustavoSVasconcelos) | [Renan Mazzilli](https://github.com/renan-mazzilli) | [Thomaz Casquel](https://github.com/Casquel)
