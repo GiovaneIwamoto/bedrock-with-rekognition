@@ -4,7 +4,7 @@
 
 The objective of this project is to create an API using the serverless framework, which will receive images manually uploaded to an Amazon S3 bucket, and utilize the Amazon Rekognition service to identify people's faces and their emotions. Additionally, it will also identify pets and provide care tips for them through integration with the Amazon Bedrock service. Throughout this process, logs will be sent to Amazon CloudWatch.
 
-[![My Skills](https://skillicons.dev/icons?i=aws,py&theme=dark)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=aws,py,postman&theme=dark)](https://skillicons.dev)
 
 ---
 
